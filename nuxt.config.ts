@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  ssr: false,
+  app: {
+    baseURL: '/portfolio/',
+  },
   components: true, // включен автоимпорт
   css: ['~/assets/css/fonts.css', '~/assets/css/main.css'],
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
