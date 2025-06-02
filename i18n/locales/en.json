@@ -1,0 +1,25 @@
+{
+  "header": {
+    "blog": "Blog",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "main": {
+    "resume": {
+      "title": "Hi, I am John, Creative Technologist",
+      "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "button": "Download resume"
+    },
+    "recent_posts": {
+      "title": "Recent posts",
+      "view": "View all"
+    },
+    "featured_works": {
+      "title": "Featured works",
+      "view": "View all"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright ©2025 All rights reserved"
+  }
+}
