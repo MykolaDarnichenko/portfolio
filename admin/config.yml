@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: myusername/myrepo
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Мои посты"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Название UA", name: "titleUa", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Тема", name: "topic", widget: "text" }
+      - { label: "Тема UA", name: "topicUa", widget: "text" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание UA", name: "descriptionUa", widget: "text" }

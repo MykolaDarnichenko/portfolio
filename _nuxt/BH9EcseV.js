@@ -1,0 +1,1 @@
+import{_ as t,c as o,a as r,o as s}from"./CXRVc539.js";const c={};function n(a,e){return s(),o("div",null,e[0]||(e[0]=[r("h1",{class:"text-center text-2xl"},"Блог",-1)]))}const _=t(c,[["render",n]]);export{_ as default};
