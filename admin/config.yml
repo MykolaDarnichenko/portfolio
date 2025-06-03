@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Ветка репозитория
+  branch: gh-pages # Ветка репозитория
 media_folder: "public/images/works" # Папка для загрузки медиа
 public_folder: "/images/works" # Путь для доступа к медиа
 collections:
