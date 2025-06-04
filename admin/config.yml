@@ -1,36 +1,38 @@
 backend:
-  name: git-gateway
-  branch: main # Ветка репозитория
-media_folder: "public/images/works" # Папка для загрузки медиа
-public_folder: "/images/works" # Путь для доступа к медиа
+  name: github
+  repo: MykolaDarnichenko/portfolio
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Статьи"
     folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "ID", name: "id", widget: "number" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Title (UA)", name: "titleUa", widget: "string" }
-      - { label: "Date", name: "date", widget: "string" }
-      - { label: "Date (UA)", name: "dateUa", widget: "string" }
-      - { label: "Topic", name: "topic", widget: "string" }
-      - { label: "Topic (UA)", name: "topicUa", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Description (UA)", name: "descriptionUa", widget: "text" }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Заголовок (ua)", name: "titleUa", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Дата (ua)", name: "dateUa", widget: "datetime" }
+      - { label: "Тематика", name: "topic", widget: "string" }
+      - { label: "Тематика (ua)", name: "topicUa", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание (ua)", name: "descriptionUa", widget: "text" }
+
   - name: "works"
-    label: "Works"
+    label: "Проекты"
     folder: "content/works"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "ID", name: "id", widget: "number" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Title (UA)", name: "titleUa", widget: "string" }
-      - { label: "Image", name: "img", widget: "image" }
-      - { label: "Date", name: "date", widget: "string" }
-      - { label: "Topic", name: "topic", widget: "string" }
-      - { label: "Topic (UA)", name: "topicUa", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Description (UA)", name: "descriptionUa", widget: "text" }
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Заголовок (ua)", name: "titleUa", widget: "string" }
+      - { label: "Изображение", name: "img", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Тематика", name: "topic", widget: "string" }
+      - { label: "Тематика (ua)", name: "topicUa", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание (ua)", name: "descriptionUa", widget: "text" }
