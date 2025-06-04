@@ -1,1 +1,0 @@
-import{_ as t,c as o,a as r,o as s}from"./DN8h1Rqh.js";const c={};function n(a,e){return s(),o("div",null,e[0]||(e[0]=[r("h1",{class:"text-center text-2xl"},"Блог",-1)]))}const _=t(c,[["render",n]]);export{_ as default};

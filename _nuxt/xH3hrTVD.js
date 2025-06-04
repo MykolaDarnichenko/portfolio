@@ -1,0 +1,1 @@
+import{_ as t,c as r,a as s,o}from"./BTqAlnTt.js";const c={};function n(a,e){return o(),r("div",null,e[0]||(e[0]=[s("h1",{class:"text-center text-2xl"},"Работы",-1)]))}const _=t(c,[["render",n]]);export{_ as default};
