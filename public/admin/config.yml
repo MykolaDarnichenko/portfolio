@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: MykolaDarnichenko/portfolio
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Статьи"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Заголовок (ua)", name: "titleUa", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Дата (ua)", name: "dateUa", widget: "datetime" }
+      - { label: "Тематика", name: "topic", widget: "string" }
+      - { label: "Тематика (ua)", name: "topicUa", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание (ua)", name: "descriptionUa", widget: "text" }
+
+  - name: "works"
+    label: "Проекты"
+    folder: "content/works"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Заголовок (ua)", name: "titleUa", widget: "string" }
+      - { label: "Изображение", name: "img", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Тематика", name: "topic", widget: "string" }
+      - { label: "Тематика (ua)", name: "topicUa", widget: "string" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание (ua)", name: "descriptionUa", widget: "text" }

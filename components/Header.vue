@@ -1,5 +1,6 @@
 <script setup>
 const { locale, setLocale } = useI18n()
+const localePath = useLocalePath()
 const isMobileMenuOpen = ref(false)
 
 onMounted(() => {
@@ -22,7 +23,7 @@ const toggleMenu = () => {
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-[33px] text-[18px]">
         <nuxt-link to="/works">{{ $t('header.works') }}</nuxt-link>
-        <nuxt-link to="/blog">{{ $t('header.blog') }}</nuxt-link>
+        <nuxt-link to="/posts">{{ $t('header.blog') }}</nuxt-link>
         <nuxt-link to="/contact">{{ $t('header.contact') }}</nuxt-link>
         <div class="flex gap-2 ml-4">
           <button @click="setLocale('en')">EN</button>
@@ -46,7 +47,7 @@ const toggleMenu = () => {
     <!-- Mobile nav -->
     <div v-if="isMobileMenuOpen" class="md:hidden mt-4 flex flex-col space-y-2 text-[18px]">
       <nuxt-link to="/works" @click="toggleMenu">{{ $t('header.works') }}</nuxt-link>
-      <nuxt-link to="/blog" @click="toggleMenu">{{ $t('header.blog') }}</nuxt-link>
+      <nuxt-link to="/posts" @click="toggleMenu">{{ $t('header.blog') }}</nuxt-link>
       <nuxt-link to="/contact" @click="toggleMenu">{{ $t('header.contact') }}</nuxt-link>
       <div class="flex gap-2">
         <button @click="setLocale('en')">EN</button>

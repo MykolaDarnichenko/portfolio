@@ -8,14 +8,14 @@ export default defineNuxtConfig({
   },
   components: true, // включен автоимпорт
   css: ['~/assets/css/fonts.css', '~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxt/content'],
   i18n: {
     defaultLocale: 'en',
+    strategy: 'prefix_except_default',
     lazy: true,
-    langDir: 'locales/', // Папка, где лежат JSON-файлы
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'ua', name: 'Українська', file: 'uk.json' }
+      { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
+      { code: 'ua', name: 'Українська', iso: 'uk-UA', file: 'uk.json' }
     ]
-  }
+  },
 })

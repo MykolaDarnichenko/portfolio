@@ -1,11 +1,9 @@
-<script setup>
-//   const posts = ref([
-//     { id: 1, title: 'Making a design system from scratch', date: '12 Feb 2020', topic: 'Design, pattern', description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.' },
-//     { id: 1, title: 'Creating pixel perfect icons in Figma', date: '12 Feb 2020', topic: 'Figma, icon design', description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.' },
-// ])
+<script setup lang="ts">
+
 </script>
 
 <template>
+
   <section class="flex flex-col gap-[34px] px-[23px] pt-[34px] pb-[58px]
   md:flex-row md:justify-between md:gap-[40px] md:pt-0 sm:pb-[71px] md:px-[50px] lg:px-[148px]">
     <div class="flex flex-col order-2 items-center gap-[33px] 
@@ -34,7 +32,7 @@
   sm:px-[148px] sm:pt-[20px] sm:pb-[32px]">
     <div class="flex justify-between pb-[12px] sm:pb-[20px]">
       <h2>{{ $t('main.recent_posts.title') }}</h2>
-      <nuxtLink to="/blog">{{ $t('main.recent_posts.view') }}</nuxtLink>
+      <nuxtLink to="/posts">{{ $t('main.recent_posts.view') }}</nuxtLink>
     </div> -->
 
     <RecentPosts/>
