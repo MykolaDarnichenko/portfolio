@@ -19,7 +19,7 @@
     <div class="flex flex-col gap-[17px] md:gap-[30px]">
     <article v-for="work in featuredWorks" :key="work.path" 
     class="text-dark flex flex-col gap-[18px] pt-[12px] pb-[20px] md:flex-row md:py-[24px]">
-    <img :src="work.img" :alt="work.topic"
+    <img :src="`${useRuntimeConfig().app.baseURL}${work.img}`" :alt="work.topic"
     class="rounded-[6px] md:max-w-[246px] object-contain">
     <div>
       <NuxtLink :to="work.path">

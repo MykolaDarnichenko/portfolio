@@ -42,6 +42,8 @@ const { data, getField } = useMarkdownContent('works')
     <article 
     class="bg-white w-full text-dark px-[20px] pt-[12px] pb-[20px]
     sm:px-[22px] sm:py-[24px]">
+    <img :src="`${useRuntimeConfig().app.baseURL}${getField('img')}`" :alt="getField('topic')"
+    class="rounded-[6px] md:max-w-[246px] object-contain">
       <h3 class="font-bold text-[22px] leading-[136%]
       sm:text-[26px] sm:leading-normal">{{ getField('title') }}</h3>
       <div class="flex gap-[24px] text-[16px] pt-[12px] sm:pt-[17px]

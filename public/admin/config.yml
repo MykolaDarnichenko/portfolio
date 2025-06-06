@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: MykolaDarnichenko/portfolio
-  branch: main
+  name: git-gateway
+  branch: gh-pages
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"

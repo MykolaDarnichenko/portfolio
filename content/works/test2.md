@@ -1,7 +1,7 @@
 ---
 title: Vibrant Portraits of 2020
 titleUa: Яскраві портрети 2020 року
-img: ../images/works/illustration.png
+img: images/works/illustration.png
 date: 2018
 topic: Illustration
 topicUa: Ілюстрація

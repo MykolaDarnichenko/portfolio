@@ -1,7 +1,7 @@
 ---
 title: Designing Dashboards
 titleUa: Проектування інформаційних панелей
-img: ../images/works/dashboard.png
+img: images/works/dashboard.png
 date: 2020
 topic: Dashboard
 topicUa: Приладова панель
