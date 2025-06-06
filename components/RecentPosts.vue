@@ -51,8 +51,10 @@ const getField = (post: any, field: string) => {
     <article v-for="post in recentPosts" :key="post.path" 
     class="bg-white w-full text-dark px-[20px] pt-[12px] pb-[20px]
     sm:px-[22px] sm:py-[24px]">
+    <NuxtLink :to="post.path">
       <h3 class="font-bold text-[22px] leading-[136%]
       sm:text-[26px] sm:leading-normal">{{ getField(post, 'title') }}</h3>
+    </NuxtLink>
       <div class="flex gap-[24px] text-[16px] pt-[12px] sm:pt-[17px]
       sm:text-[18px]
       ">

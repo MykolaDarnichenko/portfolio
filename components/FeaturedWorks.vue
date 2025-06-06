@@ -50,8 +50,10 @@
     <img :src="work.img" :alt="work.topic"
     class="rounded-[6px] md:max-w-[246px] object-contain">
     <div>
+      <NuxtLink :to="work.path">
       <h3 class="font-bold text-dark text-[24px] leading-[125%]
       md:text-[30px] md:leading-normal">{{ getField(work, 'title') }}</h3>
+    </NuxtLink>
       <div class="flex items-center gap-[22px] text-[16px] mt-[16px] md:gap-[24px]
       sm:text-[18px]
       ">
