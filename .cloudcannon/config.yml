@@ -1,42 +1,60 @@
-collections_config:
+collections:
   posts:
-    folder: content/posts
-    create: true
+    output: true
+    path: content/posts
     fields:
-      - type: text
-        name: title
-      - type: text
-        name: titleUa
-      - type: datetime
-        name: date
-      - type: datetime
-        name: dateUa
-      - type: text
-        name: topic
-      - type: text
-        name: topicUa
-      - type: textarea
-        name: description
-      - type: textarea
-        name: descriptionUa
+      title:
+        type: text
+        label: Заголовок
+      titleUa:
+        type: text
+        label: Заголовок (ua)
+      date:
+        type: datetime
+        label: Дата
+      dateUa:
+        type: datetime
+        label: Дата (ua)
+      topic:
+        type: text
+        label: Тематика
+      topicUa:
+        type: text
+        label: Тематика (ua)
+      description:
+        type: textarea
+        label: Описание
+      descriptionUa:
+        type: textarea
+        label: Описание (ua)
 
   works:
-    folder: content/works
-    create: true
+    output: true
+    path: content/works
     fields:
-      - type: text
-        name: title
-      - type: text
-        name: titleUa
-      - type: text
-        name: img
-      - type: datetime
-        name: date
-      - type: text
-        name: topic
-      - type: text
-        name: topicUa
-      - type: textarea
-        name: description
-      - type: textarea
-        name: descriptionUa
+      title:
+        type: text
+        label: Заголовок
+      titleUa:
+        type: text
+        label: Заголовок (ua)
+      img:
+        type: image
+        label: Изображение
+        folder: /public/images/works
+        default: /images/works/default.png
+      date:
+        type: datetime
+        label: Дата
+      topic:
+        type: text
+        label: Тематика
+      topicUa:
+        type: text
+        label: Тематика (ua)
+      description:
+        type: textarea
+        label: Описание
+      descriptionUa:
+        type: textarea
+        label: Описание (ua)
