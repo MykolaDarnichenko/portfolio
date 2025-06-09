@@ -9,22 +9,27 @@
 </head>
 
 <body>
-  <div id="nc-root"></div> <!-- 🔸 Обязательный элемент -->
+  <!-- Обязательный контейнер для CMS -->
+  <div id="nc-root"></div> <!-- Важно! CMS будет рендерить свой интерфейс сюда -->
 
   <script>
+    // Включаем ручной запуск CMS
     window.CMS_MANUAL_INIT = true;
   </script>
 
   <script>
     window.addEventListener("load", () => {
       fetch("/config.yml")
-        .then(res => res.text())
+        .then(res => res.text())  // Получаем содержимое config.yml
         .then(config => {
+          // Парсим YAML в объект
           const parsed = jsyaml.load(config);
-          console.log("✅ config.yml загружен:", parsed); // 🔸 debug
+          console.log("✅ config.yml загружен:", parsed); // Выводим конфиг для отладки
+
+          // Инициализируем CMS
           CMS.init({ config: parsed });
         })
-        .catch(err => console.error("❌ Ошибка загрузки config.yml:", err));
+        .catch(err => console.error("❌ Ошибка загрузки config.yml:", err)); // Логируем ошибку, если файл не загружен
     });
   </script>
 </body>
