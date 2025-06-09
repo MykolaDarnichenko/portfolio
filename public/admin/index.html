@@ -5,22 +5,16 @@
   <meta charset="utf-8" />
   <title>Content Manager</title>
 
-  <!-- ✅ Стили Decap CMS -->
-  <link href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet" />
-
-  <!-- ✅ YAML парсер -->
+  <!-- 🔧 Фиксированная версия, а не ^3.0.0 -->
+  <link href="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-
-  <!-- ✅ Скрипт Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
 </head>
 
 <body>
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
-
-  <!-- ✅ Инициализация CMS ПОСЛЕ загрузки всех скриптов -->
   <script>
     window.addEventListener("load", () => {
       fetch("/config.yml")
