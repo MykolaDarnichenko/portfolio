@@ -8,25 +8,25 @@
   <!-- ✅ CSS -->
   <link href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet" />
 
-  <!-- ✅ YAML парсер (нужен для ручной инициализации) -->
+  <!-- ✅ YAML парсер -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
-  <!-- ✅ Decap CMS -->
+  <!-- ✅ CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 
 <body>
-  <!-- ✅ Ручной запуск CMS -->
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
   <script>
     fetch("/config.yml")
-      .then((res) => res.text())
-      .then((config) => {
+      .then(res => res.text())
+      .then(config => {
         const parsed = jsyaml.load(config);
         CMS.init({ config: parsed });
-      });
+      })
+      .catch(error => console.error("Ошибка загрузки config.yml:", error));
   </script>
 </body>
 
