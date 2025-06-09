@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
-  branch: gh-pages
+  branch: main
+
+site_url: https://snazzy-duckanoo-fd9dc0.netlify.app
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
