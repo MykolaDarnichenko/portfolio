@@ -4,24 +4,27 @@
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
-  <!-- Стилевой файл можно убрать, если не добавляете свой -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
   <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
 </head>
 
 <body>
+  <div id="nc-root"></div> <!-- 🔸 Обязательный элемент -->
+
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
+
   <script>
     window.addEventListener("load", () => {
       fetch("/config.yml")
         .then(res => res.text())
         .then(config => {
           const parsed = jsyaml.load(config);
+          console.log("✅ config.yml загружен:", parsed); // 🔸 debug
           CMS.init({ config: parsed });
         })
-        .catch(err => console.error("Ошибка загрузки config.yml:", err));
+        .catch(err => console.error("❌ Ошибка загрузки config.yml:", err));
     });
   </script>
 </body>
