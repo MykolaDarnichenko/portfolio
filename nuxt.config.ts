@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   app: {
-    baseURL: '/',
+    baseURL: '/portfolio/',
   },
   components: true, // включен автоимпорт
   css: ['~/assets/css/fonts.css', '~/assets/css/main.css'],

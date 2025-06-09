@@ -1,0 +1,42 @@
+collections_config:
+  posts:
+    folder: content/posts
+    create: true
+    fields:
+      - type: text
+        name: title
+      - type: text
+        name: titleUa
+      - type: datetime
+        name: date
+      - type: datetime
+        name: dateUa
+      - type: text
+        name: topic
+      - type: text
+        name: topicUa
+      - type: textarea
+        name: description
+      - type: textarea
+        name: descriptionUa
+
+  works:
+    folder: content/works
+    create: true
+    fields:
+      - type: text
+        name: title
+      - type: text
+        name: titleUa
+      - type: text
+        name: img
+      - type: datetime
+        name: date
+      - type: text
+        name: topic
+      - type: text
+        name: topicUa
+      - type: textarea
+        name: description
+      - type: textarea
+        name: descriptionUa
