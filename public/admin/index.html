@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <title>Content Manager</title>
 
-  <!-- ✅ CSS -->
+  <!-- ✅ Стили Decap CMS -->
   <link href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet" />
 
   <!-- ✅ YAML парсер -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
-  <!-- ✅ CMS -->
+  <!-- ✅ Скрипт Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 
@@ -19,14 +19,18 @@
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
+
+  <!-- ✅ Инициализация CMS ПОСЛЕ загрузки всех скриптов -->
   <script>
-    fetch("/config.yml")
-      .then(res => res.text())
-      .then(config => {
-        const parsed = jsyaml.load(config);
-        CMS.init({ config: parsed });
-      })
-      .catch(error => console.error("Ошибка загрузки config.yml:", error));
+    window.addEventListener("load", () => {
+      fetch("/config.yml")
+        .then(res => res.text())
+        .then(config => {
+          const parsed = jsyaml.load(config);
+          CMS.init({ config: parsed });
+        })
+        .catch(err => console.error("Ошибка загрузки config.yml:", err));
+    });
   </script>
 </body>
 
