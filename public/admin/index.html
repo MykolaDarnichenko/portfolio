@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Content Manager</title>
+  <meta charset="UTF-8" />
+  <title>Admin</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
   <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Обязательный контейнер для CMS -->
-  <div id="nc-root"></div> <!-- Важно! CMS будет рендерить свой интерфейс сюда -->
-
+  <div id="nc-root"></div>
   <script>
-    // Включаем ручной запуск CMS
     window.CMS_MANUAL_INIT = true;
-  </script>
-
-  <script>
     window.addEventListener("load", () => {
       fetch("/config.yml")
-        .then(res => res.text())  // Получаем содержимое config.yml
+        .then(res => res.text())
         .then(config => {
-          // Парсим YAML в объект
           const parsed = jsyaml.load(config);
-          console.log("✅ config.yml загружен:", parsed); // Выводим конфиг для отладки
-
-          // Инициализируем CMS
           CMS.init({ config: parsed });
         })
-        .catch(err => console.error("❌ Ошибка загрузки config.yml:", err)); // Логируем ошибку, если файл не загружен
+        .catch(err => console.error("Ошибка загрузки config.yml:", err));
     });
   </script>
 </body>
